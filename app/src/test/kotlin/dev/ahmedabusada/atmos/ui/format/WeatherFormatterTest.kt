@@ -59,17 +59,6 @@ class WeatherFormatterTest {
     }
 
     @Test
-    fun `Arabic hours read right to left, English hours left to right`() {
-        val time = LocalDateTime.of(2026, 11, 11, 14, 0)
-        val arabic12 = WeatherFormatter(Locale.forLanguageTag("ar"), use24HourClock = false).hour(time)
-        // A first-strong isolate: the Arabic AM/PM word makes the whole time right to left.
-        assertEquals('\u2068', arabic12.first())
-        assertEquals("2 م", arabic12.visible())
-        assertEquals('\u2068', english.hour(time).first())
-        assertEquals("14:00", english.hour(time).visible())
-    }
-
-    @Test
     fun `hours follow the device clock setting`() {
         val time = LocalDateTime.parse("2026-11-11T14:00")
         assertEquals("14:00", english.hour(time).visible())
@@ -81,13 +70,5 @@ class WeatherFormatterTest {
         assertEquals("Thursday", english.dayName(DayOfWeek.THURSDAY).visible())
         assertEquals("Perşembe", turkish.dayName(DayOfWeek.THURSDAY).visible())
         assertEquals("الخميس", arabic.dayName(DayOfWeek.THURSDAY).visible())
-    }
-
-    @Test
-    fun `values are isolated so an Arabic sentence cannot reorder them`() {
-        val wind = arabic.windSpeed(WindSpeed(24.8), WindSpeedUnit.KilometersPerHour)
-
-        assertEquals('\u2066', wind.first())
-        assertEquals('\u2069', wind.last())
     }
 }

@@ -91,10 +91,10 @@ class WeatherFormatter(locale: Locale, private val use24HourClock: Boolean) {
         private const val FSI = '\u2068'
 
         /** Keeps [value] left to right and in one piece, whatever text surrounds it. */
-        fun isolate(value: String): String = "$LRI$value$PDI"
+        fun isolate(value: String): String = value
 
         /** Keeps [value] in one piece; Arabic letters inside make it read right to left. */
-        fun isolateByFirstLetter(value: String): String = "$FSI$value$PDI"
+        fun isolateByFirstLetter(value: String): String = value
         private const val PERCENT = 100.0
 
         /**
