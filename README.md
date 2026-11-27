@@ -6,7 +6,7 @@ development with Clean Architecture and an AI coding agent.**
 <!-- step-banner:start -->
 > ### 📍 You are on `main`: the finished app
 > This branch is the complete app. To **learn how it was built**, start at
-> [**Step 01 — Planning: documents before code**](https://github.com/AhmedJAbuSada/atmos-android/tree/step-01-planning) and follow the steps in order:
+> [**Step 01 — Planning: documents before code**](https://github.com/ahmetjmustafaoglu/atmos-android/tree/step-01-planning) and follow the steps in order:
 > each step branch has its own README that explains what that step is, why it exists,
 > and what changed. All steps: [ROADMAP.md](docs/ROADMAP.md).
 <!-- step-banner:end -->
@@ -17,7 +17,7 @@ development with Clean Architecture and an AI coding agent.**
 ![Languages](https://img.shields.io/badge/i18n-EN%20%7C%20TR%20%7C%20AR%20(RTL)-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-[![CI](https://github.com/AhmedJAbuSada/atmos-android/actions/workflows/ci.yml/badge.svg)](https://github.com/AhmedJAbuSada/atmos-android/actions/workflows/ci.yml)
+[![CI](https://github.com/ahmetjmustafaoglu/atmos-android/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmetjmustafaoglu/atmos-android/actions/workflows/ci.yml)
 
 > ✅ **Version 1.0.0.** All seven steps are done. The Android app is complete; iOS, React
 > Native and Flutter follow the same plan.
@@ -53,9 +53,9 @@ Full details: [ROADMAP.md](docs/ROADMAP.md).
 | Platform | Repository |
 |---|---|
 | **Android** (Kotlin, Compose) | you are here |
-| iOS (Swift, SwiftUI) | [atmos-ios](https://github.com/AhmedJAbuSada/atmos-ios) |
-| React Native (TypeScript) | [atmos-react-native](https://github.com/AhmedJAbuSada/atmos-react-native) |
-| Flutter (Dart) | [atmos-flutter](https://github.com/AhmedJAbuSada/atmos-flutter) |
+| iOS (Swift, SwiftUI) | [atmos-ios](https://github.com/ahmetjmustafaoglu/atmos-ios) |
+| React Native (TypeScript) | [atmos-react-native](https://github.com/ahmetjmustafaoglu/atmos-react-native) |
+| Flutter (Dart) | [atmos-flutter](https://github.com/ahmetjmustafaoglu/atmos-flutter) |
 
 Same features, same architecture, same step-by-step plan. Compare how each platform
 solves the same problem.
@@ -120,7 +120,7 @@ the whole method, not just the result:
 Requirements: Android Studio (latest stable), or JDK 21 plus the Android SDK.
 
 ```bash
-git clone https://github.com/AhmedJAbuSada/atmos-android.git
+git clone https://github.com/ahmetjmustafaoglu/atmos-android.git
 cd atmos-android
 ./gradlew assembleDebug
 ```
@@ -141,7 +141,7 @@ Quality checks, the same ones CI runs:
 ## Author
 
 **Ahmed J. AbuSada**, senior mobile and front-end developer.
-GitHub: [@AhmedJAbuSada](https://github.com/AhmedJAbuSada)
+GitHub: [@ahmetjmustafaoglu](https://github.com/ahmetjmustafaoglu)
 
 ## License
 
