@@ -25,6 +25,9 @@
   English and Turkish times stay left to right. Found by comparing with the Flutter app's Arabic
   screenshots. **Lesson:** "isolate every value" is not right for every value; a time contains a
   word. Four apps of the same product review each other.
+- **Retry 429 "Too Many Requests"** (`fix/retry-429`, ADR-0008): the owner decided that a
+  rate-limited request is retried, waiting the server's `Retry-After` (up to 10 s), instead of
+  showing an error. Same rule in all four apps; API_CONTRACT §4 updated.
 
 ## After 1.0 (optional, not planned)
 - Baseline Profiles (needs a physical or managed device).

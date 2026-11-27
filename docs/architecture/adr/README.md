@@ -16,5 +16,6 @@ ADR *supersedes* the old one, so the history of *why* is never lost.
 | [0005](0005-localization-en-tr-ar.md) | Localization: English, Turkish, Arabic (RTL) | Accepted |
 | [0006](0006-errors-as-values.md) | Errors as values (`AppResult`) instead of exceptions | Accepted |
 | [0007](0007-static-analysis-without-detekt.md) | Static analysis: ktlint + Android Lint + a custom casing check, no detekt (for now) | Accepted |
+| [0008](0008-retry-rate-limited-requests.md) | Retry rate-limited requests (HTTP 429), honouring Retry-After | Accepted |
 
 Template: copy [`template.md`](template.md).

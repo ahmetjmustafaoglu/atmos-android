@@ -5,6 +5,10 @@ and versions follow [Semantic Versioning](https://semver.org/). Each tutorial st
 minor version until 1.0.0.
 
 ## [Unreleased]
+### Changed
+- Short rate limits from Open-Meteo (HTTP 429) are retried, waiting the `Retry-After` the server
+  asks for (up to 10 s), instead of showing an error.
+
 ### Fixed
 - Arabic times read in the natural order ("2 م", not the AM/PM word first) with a 12-hour
   clock. Found by comparing the Arabic screenshots with the Flutter app.
