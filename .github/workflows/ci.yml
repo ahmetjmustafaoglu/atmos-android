@@ -6,8 +6,8 @@ name: CI
 on:
   pull_request:
   push:
-    # main, the tutorial's step branches (every snapshot is verified too) and fix branches.
-    branches: [main, "step-*", "fix/*"]
+    # main, the tutorial's step branches (every snapshot is verified too), fix and task branches.
+    branches: [main, "step-*", "fix/*", "task/*"]
 
 # A new push to the same branch cancels the previous run, which saves CI minutes.
 concurrency:
@@ -89,6 +89,38 @@ jobs:
 
   # A real Android emulator: the end-to-end test against the real API, then a smoke test
   # of the shrunk (R8) release build. Slower, so it runs after the fast checks pass.
+  # Tests the task's hidden tests against every candidate solution (tasks/README.md).
+  tasks:
+    name: Task grader (the hidden tests accept every correct fix, reject the rest)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out
+        uses: actions/checkout@v5
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Grade task 001 against buggy, hard-coded, reference and alternative code
+        run: |
+          tasks/grade.sh > grade.log 2>&1 || {
+            cat grade.log
+            # Each wrong grade becomes an annotation on the run's page.
+            grep -E "^error: " grade.log | sed 's/^error: /::error title=Task grader::/'
+            exit 1
+          }
+
+      - name: Show the grades
+        if: always()
+        run: cat grade.log
+
   device:
     name: Emulator tests and release smoke test
     needs: build
