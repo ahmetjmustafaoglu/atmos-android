@@ -29,7 +29,7 @@ import dev.ahmedabusada.atmos.ui.theme.AtmosTheme
 /** Links shown on the About screen (F-11). */
 object AboutLinks {
     const val OPEN_METEO = "https://open-meteo.com/"
-    const val SOURCE_CODE = "https://github.com/AhmedJAbuSada/atmos-android"
+    const val SOURCE_CODE = "https://github.com/ahmetjmustafaoglu/atmos-android"
 }
 
 /** About (US-10): attribution required by the Open-Meteo licence, version, source code. */

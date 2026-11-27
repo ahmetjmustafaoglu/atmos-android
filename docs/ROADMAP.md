@@ -4,7 +4,7 @@ Each step is a branch. Each branch contains everything from the step before, plu
 level. Check out any branch to see the project exactly as it was at that point.
 
 ```bash
-git clone https://github.com/AhmedJAbuSada/atmos-android.git
+git clone https://github.com/ahmetjmustafaoglu/atmos-android.git
 cd atmos-android
 git switch step-03-domain-layer   # any step
 ```
