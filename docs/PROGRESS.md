@@ -3,7 +3,7 @@
 > Read this first at the start of every work session (human or AI). Update it at the end.
 
 **Current step:** 07, quality & release ✅ done. **Android v1.0.0 is complete.**
-**Next up:** the same seven steps for iOS ([atmos-ios](https://github.com/AhmedJAbuSada/atmos-ios))
+**Next up:** the same seven steps for iOS ([atmos-ios](https://github.com/ahmetjmustafaoglu/atmos-ios))
 **Last updated:** 2026-11-11
 
 ## Status
@@ -35,6 +35,15 @@
 
 ## Open decisions
 - None.
+
+## Hand-over (2026-11-27): branches waiting for CI
+The GitHub account was renamed to `ahmetjmustafaoglu`; old links redirect, and pushes to the old URL still
+work. The session that pushed these could no longer read CI results under the new name, so a
+new session (with the `ahmetjmustafaoglu/atmos-*` repositories selected) must check and merge:
+- `fix/github-name`: links to the new account name. Green CI → merge into `main` with `--no-ff`.
+- Not affected by the clock-change bug: dates stay `LocalDate`/`LocalDateTime`, and `java.time` already uses the compatible rule.
+
+After merging, move `release/1.0` only if the owner asks: it is the stable 1.0 snapshot.
 
 ## Notes for the next session
 - Real Open-Meteo responses are in `docs/api/samples/`; `:data` tests read them directly.
